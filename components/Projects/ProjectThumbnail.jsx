@@ -65,6 +65,7 @@ const ProjectThumbnail = ({ label, onOpen, src, previewSrc }) => {
           alt="img of project"
           layout="fill"
           className="projectBg"
+          placeholder="blur"
         />
         {/* Div that comes in from the top when picture is hovered */}
         <MotionBox
@@ -84,6 +85,7 @@ const ProjectThumbnail = ({ label, onOpen, src, previewSrc }) => {
             alt="img of project"
             layout="fill"
             className="projectBg"
+            placeholder="blur"
           />
           <style jsx>{`
             .projectBg .projectBg > * {

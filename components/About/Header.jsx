@@ -31,7 +31,12 @@ const Header = () => {
           display="inline-block"
           overflow="hidden"
         >
-          <Image src={profilepic} alt="profile img" layout="fill" />
+          <Image
+            src={profilepic}
+            alt="profile img"
+            layout="fill"
+            placeholder="blur"
+          />
         </Avatar>
         <Text fontWeight="bold" fontSize="xl">
           Lester Fernandez
