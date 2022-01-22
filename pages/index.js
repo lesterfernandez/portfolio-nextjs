@@ -35,9 +35,10 @@ const Home = () => {
         <Heading size="lg">About Me</Heading>
         <Text fontSize="lg">
           I am a full stack developer from Miami, Fl. I have a passion for
-          programming. My favorite programming language is JavaScript but I
-          have experience with C#, Python, and Java. In my freetime I work on
-          side-projects and create YouTube videos about what I am working on.
+          programming. My favorite programming languages are TypeScript and
+          JavaScript, but I also have experience with C#, Python, and Java.
+          In my freetime I work on side-projects and create YouTube videos
+          about programming and technology.
         </Text>
         <Spacer />
         <Text fontSize="lg">
