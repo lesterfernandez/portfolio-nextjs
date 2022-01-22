@@ -8,10 +8,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@chakra-ui/react": "^1.7.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "framer-motion": "^5",
+=======
+>>>>>>> dbba7e4405aad3052ea0ecb839b46b1fe353f1c8
     "next": "12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -21,6 +24,10 @@
     "@types/react": "17.0.38",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
+<<<<<<< HEAD
     "typescript": "^4.5.5"
+=======
+    "typescript": "4.5.5"
+>>>>>>> dbba7e4405aad3052ea0ecb839b46b1fe353f1c8
   }
 }
