@@ -13,6 +13,7 @@ import {
   Heading,
   HStack,
   Spacer,
+  Text,
 } from "@chakra-ui/layout";
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu";
 import Link from "next/link";
@@ -59,16 +60,24 @@ const Nav = () => {
                   id="menu-burger-btn"
                 />
                 <MenuList id="menu-list">
-                  <MenuItem id="menu-item-1">
-                    <Link href="/">About</Link>
-                  </MenuItem>
-                  <MenuItem id="menu-item-2">
-                    <Link href="/projects">Projects</Link>
-                  </MenuItem>
-                  <MenuItem id="menu-item-3">
-                    <Link href="/contact">Contact Me</Link>
-                    <ChatIcon ml="auto" />
-                  </MenuItem>
+                  <Link href="/" passHref>
+                    <MenuItem id="menu-item-1">
+                      <Text>About</Text>
+                    </MenuItem>
+                  </Link>
+                  <Link href="/projects" passHref>
+                    <MenuItem id="menu-item-2">
+                      <Text>Projects</Text>
+                    </MenuItem>
+                  </Link>
+                  <Link href="/contact" passHref>
+                    <MenuItem id="menu-item-3">
+                      <>
+                        <Text>Contact Me</Text>
+                        <ChatIcon ml="auto" />
+                      </>
+                    </MenuItem>
+                  </Link>
                 </MenuList>
               </Menu>
             </Box>
