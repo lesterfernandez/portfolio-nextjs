@@ -10,7 +10,7 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/modal";
-import { Box } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import { Tag } from "@chakra-ui/tag";
 import Image from "next/image";
 import Article from "../Article";
@@ -25,6 +25,7 @@ const ProjectInfo = ({
   architecture,
   demoText,
   demoLink,
+  sourceLink,
 }) => {
   return (
     <Modal
@@ -32,7 +33,7 @@ const ProjectInfo = ({
       onClose={onClose}
       motionPreset="slideInBottom"
       scrollBehavior="inside"
-      size="md"
+      size="2xl"
     >
       <ModalOverlay />
       <ModalContent>
@@ -47,13 +48,34 @@ const ProjectInfo = ({
               alt="project preview img"
             />
           </Box>
-          <HStack justify="center" py="1rem">
-            <Text>{demoText}</Text>
-            <LinkIcon />{" "}
-            <Link textDecoration="underline" href={demoLink} target="_blank">
-              {demoLink}
-            </Link>
-          </HStack>
+          <VStack py="1rem">
+            {demoText && demoText.length > 1 && (
+              <HStack justify="center">
+                <Text>{demoText}</Text>
+                <LinkIcon />{" "}
+                <Link
+                  textDecoration="underline"
+                  href={demoLink}
+                  target="_blank"
+                >
+                  {demoLink}
+                </Link>
+              </HStack>
+            )}
+            {sourceLink && sourceLink.length > 1 && (
+              <HStack justify="center">
+                <Text>Source Code</Text>
+                <LinkIcon />{" "}
+                <Link
+                  textDecoration="underline"
+                  href={sourceLink}
+                  target="_blank"
+                >
+                  {sourceLink}
+                </Link>
+              </HStack>
+            )}
+          </VStack>
           <Article my="0" m="1.2rem 0 3rem">
             <Heading size="lg">Technologies Used</Heading>
             <Wrap>

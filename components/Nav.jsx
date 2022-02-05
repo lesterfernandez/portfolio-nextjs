@@ -36,7 +36,7 @@ const Nav = () => {
             <Box display={{ base: "none", md: "inline" }} mr="auto">
               <HStack spacing="1.7rem">
                 <Link href="/">About</Link>
-                <Link href="/projects">Projects</Link>
+                <Link href="/portfolio">Portfolio</Link>
                 <Link href="/contact">Contact Me</Link>
               </HStack>
             </Box>
@@ -65,7 +65,7 @@ const Nav = () => {
                       <Text>About</Text>
                     </MenuItem>
                   </Link>
-                  <Link href="/projects" passHref>
+                  <Link href="/portfolio" passHref>
                     <MenuItem id="menu-item-2">
                       <Text>Projects</Text>
                     </MenuItem>

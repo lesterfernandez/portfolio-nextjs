@@ -17,6 +17,7 @@ const Home = () => {
         </Heading>
         <Wrap spacing="0.5rem" maxW="70%" pt="0.4rem">
           <Tag>JavaScript</Tag>
+          <Tag>TypeScript</Tag>
           <Tag>Git</Tag>
           <Tag>React.js</Tag>
           <Tag>REST</Tag>
@@ -25,9 +26,9 @@ const Home = () => {
           <Tag>PostgreSQL</Tag>
           <Tag>Redis</Tag>
           <Tag>Socket.io</Tag>
-          <Tag>HTML/CSS</Tag>
           <Tag>Java</Tag>
           <Tag>C#</Tag>
+          <Tag>HTML/CSS</Tag>
         </Wrap>
       </Article>
 
@@ -36,7 +37,7 @@ const Home = () => {
         <Text fontSize="lg">
           I am a full stack developer from Miami, Fl. I have a passion for
           programming. My favorite programming languages are TypeScript and
-          JavaScript, but I also have experience with C#, Python, and Java.
+          JavaScript, but I also have experience with Java, C#, and Python.
           In my freetime I work on side-projects and create YouTube videos
           about programming and technology.
         </Text>

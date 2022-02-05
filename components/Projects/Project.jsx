@@ -12,6 +12,7 @@ const Project = ({
   architecture,
   demoText,
   demoLink,
+  sourceLink,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -32,6 +33,7 @@ const Project = ({
         architecture={architecture}
         demoText={demoText}
         demoLink={demoLink}
+        sourceLink={sourceLink}
       />
     </>
   );

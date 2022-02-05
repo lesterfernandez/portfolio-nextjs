@@ -50,7 +50,7 @@ const Header = () => {
         <Text fontSize="xl" textAlign="center">
           I create beautiful applications and have fun while I&apos;m at it
         </Text>
-        <Link href="/projects" passHref>
+        <Link href="/portfolio" passHref>
           <Button
             colorScheme="blue"
             className="primary-btn"
@@ -67,7 +67,7 @@ const Header = () => {
               />
             }
           >
-            My Projects
+            My Portfolio
           </Button>
         </Link>
       </VStack>

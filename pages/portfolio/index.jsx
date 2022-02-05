@@ -1,5 +1,6 @@
-import { Heading, VStack, Wrap } from "@chakra-ui/layout";
-import Project from "../../components/Projects/Project";
+import { VStack } from "@chakra-ui/layout";
+import Projects from "../../components/Projects/Projects";
+// photo imports
 import cubedUpIconPic from "../../public/cubedupicon.png";
 import cubedUpPreview from "../../public/ipadscreenshot.png";
 import twitterCloneFeedPic from "../../public/twitterclonefeed.png";
@@ -7,19 +8,29 @@ import twitterCloneLanding from "../../public/twitterclonelanding.png";
 import whatsappConvo from "../../public/whatsappconvo.png";
 import whatsappLogin from "../../public/whatsapplogin.png";
 
-const Projects = () => {
+const Portfolio = ({ projects }) => {
   return (
     <VStack spacing="3rem" py="4rem">
-      <Heading textAlign="center">Things I&apos;ve Done</Heading>
-      <Wrap justify="center" spacing="1.4rem">
-        <Project
-          src={whatsappLogin}
-          previewSrc={whatsappConvo}
-          label="Real-Time Messenger"
-          title="Whatsapp Clone"
-          demoText="Live Demo"
-          demoLink="https://lester-whatsapp.netlify.app"
-          tags={[
+      <Projects projects={projects} />
+    </VStack>
+  );
+};
+
+export default Portfolio;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      projects: [
+        {
+          src: whatsappLogin,
+          previewSrc: whatsappConvo,
+          label: "Real-Time Messenger",
+          title: "Live Chat App",
+          demoText: "Live Demo",
+          demoLink: "https://lester-whatsapp.netlify.app",
+          sourceLink: "https://bit.ly/lester_messenger_code",
+          tags: [
             "NodeJS",
             "React",
             "SocketIO",
@@ -29,8 +40,8 @@ const Projects = () => {
             "Dokku",
             "Digital Ocean",
             "Lets Encrypt",
-          ]}
-          architecture={{
+          ],
+          architecture: {
             "Front End":
               "The front-end uses React.js along with React Router to implement client-side routing. It uses Formik and Yup to do client-side form validation. Front-end authorization is done with the help of the React Context api. However, because front-end code is vulnerable, every user action is verified on the back-end.",
             "Back End":
@@ -39,17 +50,17 @@ const Projects = () => {
               "Redis is used for rate limiting and to store conversations. While user accounts are stored in PostgreSQL.",
             "Web Hosting":
               "While the front-end is hosted on Netlify, the server and databases are hosted on Digital Ocean. The back-end is configured with a Lets Encrypt HTTPS certificate tied to the NGinx reverse proxy. The Dokku PaaS is used for continuous deployment.",
-          }}
-        />
-
-        <Project
-          src={twitterCloneLanding}
-          previewSrc={twitterCloneFeedPic}
-          label="Full Stack Micro Blog"
-          title="Twitter Clone"
-          demoText="Live Demo"
-          demoLink="https://bit.ly/312isBR"
-          tags={[
+          },
+        },
+        {
+          src: twitterCloneLanding,
+          previewSrc: twitterCloneFeedPic,
+          label: "Personal Micro Blog",
+          title: "Personal Micro Blog",
+          demoText: "Live Demo",
+          demoLink: "https://bit.ly/312isBR",
+          sourceLink: "https://bit.ly/lester_microblog_code",
+          tags: [
             "NodeJS",
             "PostgreSQL",
             "ExpressJS",
@@ -59,8 +70,8 @@ const Projects = () => {
             "React Router",
             "React Query",
             "JavaScript",
-          ]}
-          architecture={{
+          ],
+          architecture: {
             "Front End":
               "React is used along with modern features such as React Context and Hooks. Client-Side Routing is done with React Router v6.",
             "Data Caching":
@@ -71,24 +82,24 @@ const Projects = () => {
               "Users are authenticated through Google OAuth 2.0. PassportJS helps reduce redundancy in the code. Express-session stores user sessions and sets a cookie on the client's browser.",
             Database:
               "All user accounts are stored and managed in a PostgreSQL database. Relations are used to tie user accounts to their posts.",
-          }}
-        />
-
-        <Project
-          src={cubedUpIconPic}
-          previewSrc={cubedUpPreview}
-          label="IOS Mobile Game"
-          title="Cubed Up"
-          demoText="App Listing"
-          demoLink="https://apple.co/3xwOm58"
-          tags={[
+          },
+        },
+        {
+          src: cubedUpIconPic,
+          previewSrc: cubedUpPreview,
+          label: "IOS Mobile Game",
+          title: "Cubed Up",
+          demoText: "App Listing",
+          demoLink: "https://apple.co/3xwOm58",
+          sourceLink: "",
+          tags: [
             "C#",
             "Unity",
             "Mirror Multiplayer Framework",
             "Playfab PaaS",
             "OOP",
-          ]}
-          architecture={{
+          ],
+          architecture: {
             Authentication:
               "Players can sign up or log into previous accounts. The PlayFab API is used to implement user Authentication.",
             Multiplayer:
@@ -96,11 +107,9 @@ const Projects = () => {
             "Global Leaderboard":
               "Using PlayFab's API I implemented a leaderboard where players can see where they rank and if they made it to the top 10 players world-wide.",
             Code: "This app was coded in C# using the Unity Framework. It implements an Object-Oriented programming paradigm. This results in the codebase being maintable and easy to expand upon.",
-          }}
-        />
-      </Wrap>
-    </VStack>
-  );
-};
-
-export default Projects;
+          },
+        },
+      ],
+    },
+  };
+}
