@@ -18,24 +18,8 @@ const Projects = ({ projects }) => {
             key={project.label + project.title}
             label={project.label}
             title={project.title}
-            src={
-              idx == 0
-                ? whatsappLogin
-                : idx == 1
-                ? twitterCloneLanding
-                : idx == 2
-                ? cubedUpIconPic
-                : null
-            }
-            previewSrc={
-              idx == 0
-                ? whatsappConvo
-                : idx == 1
-                ? twitterCloneFeedPic
-                : idx == 2
-                ? cubedUpPreview
-                : null
-            }
+            src={getSrcPic(idx)}
+            previewSrc={getPreviewPic(idx)}
             demoText={project.demoText}
             demoLink={project.demoLink}
             sourceLink={project.sourceLink}
@@ -46,6 +30,26 @@ const Projects = ({ projects }) => {
       </Wrap>
     </>
   );
+};
+
+const getSrcPic = idx => {
+  return idx == 0
+    ? whatsappLogin
+    : idx == 1
+    ? twitterCloneLanding
+    : idx == 2
+    ? cubedUpIconPic
+    : null;
+};
+
+const getPreviewPic = idx => {
+  return idx == 0
+    ? whatsappConvo
+    : idx == 1
+    ? twitterCloneFeedPic
+    : idx == 2
+    ? cubedUpPreview
+    : null;
 };
 
 export default Projects;

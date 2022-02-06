@@ -16,8 +16,6 @@ export async function getStaticProps() {
     props: {
       projects: [
         {
-          src: "2",
-          previewSrc: "2",
           label: "Real-Time Messenger",
           title: "Live Chat App",
           demoText: "Live Demo",
@@ -46,8 +44,6 @@ export async function getStaticProps() {
           },
         },
         {
-          src: "1",
-          previewSrc: "1",
           label: "Personal Micro Blog",
           title: "Personal Micro Blog",
           demoText: "Live Demo",
@@ -78,8 +74,6 @@ export async function getStaticProps() {
           },
         },
         {
-          src: "0",
-          previewSrc: "0",
           label: "IOS Mobile Game",
           title: "Cubed Up",
           demoText: "App Listing",
