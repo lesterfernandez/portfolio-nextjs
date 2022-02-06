@@ -1,4 +1,5 @@
 import { Heading, List, ListItem } from "@chakra-ui/layout";
+import React from "react";
 import Article from "../Article";
 
 const ProjectArchitecture = ({ architecture, title }) => {
@@ -9,17 +10,10 @@ const ProjectArchitecture = ({ architecture, title }) => {
       </Heading>
       <List spacing={2} ml="0.2rem">
         {Object.entries(architecture).map(itemArr => (
-          <>
-            <Heading key={title + "-heading-" + itemArr[0]} size="md">
-              {itemArr[0]}
-            </Heading>
-            <ListItem
-              key={title + "-desc-" + itemArr[0]}
-              m="1rem 0 1.4rem 0.2rem"
-            >
-              {itemArr[1]}
-            </ListItem>
-          </>
+          <React.Fragment key={title + "header" + [itemArr[0]]}>
+            <Heading size="md">{itemArr[0]}</Heading>
+            <ListItem m="1rem 0 1.4rem 0.2rem">{itemArr[1]}</ListItem>
+          </React.Fragment>
         ))}
       </List>
     </Article>

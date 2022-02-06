@@ -15,6 +15,7 @@ const Projects = ({ projects }) => {
             previewSrc={project.previewSrc}
             demoText={project.demoText}
             demoLink={project.demoLink}
+            sourceLink={project.sourceLink}
             tags={project.tags}
             architecture={project.architecture}
           />

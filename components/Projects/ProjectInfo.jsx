@@ -40,7 +40,7 @@ const ProjectInfo = ({
         <ModalHeader fontSize="1.7rem">{title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Box boxSize="200px" mx="auto" rounded="lg" overflow="hidden">
+          <Box boxSize="300px" mx="auto" rounded="lg" overflow="hidden">
             <Image
               src={previewSrc}
               objectFit="cover"
