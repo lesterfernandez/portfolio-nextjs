@@ -1,12 +1,5 @@
 import { VStack } from "@chakra-ui/layout";
 import Projects from "../../components/Projects/Projects";
-// photo imports
-import cubedUpIconPic from "../../public/cubedupicon.png";
-import cubedUpPreview from "../../public/ipadscreenshot.png";
-import twitterCloneFeedPic from "../../public/twitterclonefeed.png";
-import twitterCloneLanding from "../../public/twitterclonelanding.png";
-import whatsappConvo from "../../public/whatsappconvo.png";
-import whatsappLogin from "../../public/whatsapplogin.png";
 
 const Portfolio = ({ projects }) => {
   return (
@@ -23,8 +16,8 @@ export async function getStaticProps() {
     props: {
       projects: [
         {
-          src: whatsappLogin,
-          previewSrc: whatsappConvo,
+          src: "2",
+          previewSrc: "2",
           label: "Real-Time Messenger",
           title: "Live Chat App",
           demoText: "Live Demo",
@@ -53,8 +46,8 @@ export async function getStaticProps() {
           },
         },
         {
-          src: twitterCloneLanding,
-          previewSrc: twitterCloneFeedPic,
+          src: "1",
+          previewSrc: "1",
           label: "Personal Micro Blog",
           title: "Personal Micro Blog",
           demoText: "Live Demo",
@@ -85,8 +78,8 @@ export async function getStaticProps() {
           },
         },
         {
-          src: cubedUpIconPic,
-          previewSrc: cubedUpPreview,
+          src: "0",
+          previewSrc: "0",
           label: "IOS Mobile Game",
           title: "Cubed Up",
           demoText: "App Listing",
