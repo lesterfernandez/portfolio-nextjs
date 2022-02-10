@@ -13,13 +13,13 @@ const Projects = ({ projects }) => {
     <>
       <Heading textAlign="center">Side Projects</Heading>
       <Wrap justify="center" spacing="1.4rem">
-        {projects.map((project, idx) => (
+        {projects.map(project => (
           <Project
             key={project.label + project.title}
             label={project.label}
             title={project.title}
-            src={getSrcPic(idx)}
-            previewSrc={getPreviewPic(idx)}
+            src={getSrcPic(project.title)}
+            previewSrc={getPreviewPic(project.title)}
             demoText={project.demoText}
             demoLink={project.demoLink}
             sourceLink={project.sourceLink}
@@ -32,24 +32,27 @@ const Projects = ({ projects }) => {
   );
 };
 
-const getSrcPic = idx => {
-  return idx == 0
-    ? whatsappLogin
-    : idx == 1
-    ? twitterCloneLanding
-    : idx == 2
-    ? cubedUpIconPic
-    : null;
+const projectPics = {
+  "Live Chat App": {
+    preview: whatsappConvo,
+    main: whatsappLogin,
+  },
+  "Personal Micro Blog": {
+    preview: twitterCloneFeedPic,
+    main: twitterCloneLanding,
+  },
+  "Cubed Up": {
+    preview: cubedUpPreview,
+    main: cubedUpIconPic,
+  },
 };
 
-const getPreviewPic = idx => {
-  return idx == 0
-    ? whatsappConvo
-    : idx == 1
-    ? twitterCloneFeedPic
-    : idx == 2
-    ? cubedUpPreview
-    : null;
+const getSrcPic = title => {
+  return projectPics[title].main;
+};
+
+const getPreviewPic = title => {
+  return projectPics[title].preview;
 };
 
 export default Projects;

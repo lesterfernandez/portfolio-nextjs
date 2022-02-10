@@ -47,7 +47,7 @@ export async function getStaticProps() {
           label: "Personal Micro Blog",
           title: "Personal Micro Blog",
           demoText: "Live Demo",
-          demoLink: "https://bit.ly/312isBR",
+          demoLink: "https://social-media-react-4.netlify.app/",
           sourceLink: "https://bit.ly/lester_microblog_code",
           tags: [
             "NodeJS",
