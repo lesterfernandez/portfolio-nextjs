@@ -11,7 +11,7 @@ const InputField = ({ label, ...props }) => {
   return (
     <FormControl isInvalid={meta.error && meta.touched}>
       <FormLabel>{label}</FormLabel>
-      <Field as={Input} {...props} {...field} />
+      <Field as={Input} {...props} {...field} autoComplete="off" />
       <FormErrorMessage>
         {meta.error && meta.touched && meta.error}
       </FormErrorMessage>
