@@ -1,10 +1,9 @@
 # My Portfolio Website
-
-[https://lesterfernandez.me](Live Site ��)
+[Live Site](https://lesterfernandez.me)
 
 ## Technologies Used:
 
-- React JS
+- React.js
 - NextJS
 - Chakra UI
 - Framer Motion
