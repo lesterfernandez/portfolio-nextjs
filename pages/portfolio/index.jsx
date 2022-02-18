@@ -18,6 +18,9 @@ export async function getStaticProps() {
         {
           label: "Real-Time Messenger",
           title: "Live Chat App",
+          description:
+            "A real-time chat web app where users can log in, add friends and communicate with them in real time. I built this application for fun and to challenge myself. It helped me form a foundation in project management and systems design.",
+          challenges: ["test"],
           demoText: "Live Demo",
           demoLink: "https://lester-whatsapp.netlify.app",
           sourceLink: "https://bit.ly/lester_messenger_code",
@@ -46,6 +49,9 @@ export async function getStaticProps() {
         {
           label: "Personal Micro Blog",
           title: "Personal Micro Blog",
+          description:
+            "A public micro-blogging platform where users can log in and share their thoughts with others. I built this application to learn how to architect a consumable API.",
+          challenges: ["Google OAuth"],
           demoText: "Live Demo",
           demoLink: "https://social-media-react-4.netlify.app/",
           sourceLink: "https://bit.ly/lester_microblog_code",
