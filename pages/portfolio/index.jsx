@@ -82,6 +82,14 @@ export async function getStaticProps() {
         {
           label: "IOS Mobile Game",
           title: "Cubed Up",
+          description:
+            "A multiplayer/single-player mobile game with a global leaderboard so users can compete against each other in real time. This was my first major project that I undertook. I built this app with the hopes of improving my skills as a developer. It was with the project that I first learned about APIs and the client-server model.",
+          challenges: [
+            "Dedicated server",
+            "Using libraries",
+            "Project management",
+            "Systems design",
+          ],
           demoText: "App Listing",
           demoLink: "https://apple.co/3xwOm58",
           sourceLink: "",
