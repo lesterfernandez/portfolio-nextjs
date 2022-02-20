@@ -17,11 +17,10 @@ const Home = () => {
           using technology to create useful products and solve complex
           problems. I continuously pursue the expansion of my knowledge and
           the improvement of my skills as an engineer. <br />
-          <br />
-          My most familiar programming languages are TypeScript and
-          JavaScript, but I am also familiar with Java, C#, and Python. In my
-          freetime I work on side-projects and create YouTube videos about
-          programming and technology.
+          <br />I am most experienced with TypeScript and JavaScript, but I
+          am also familiar with Java, C#, and Python. In my freetime I work
+          on side-projects and create YouTube videos about programming and
+          technology.
         </Text>
         <Spacer />
         <Text fontSize="lg">
