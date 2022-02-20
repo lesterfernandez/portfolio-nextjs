@@ -48,7 +48,7 @@ const Header = () => {
       </VStack>
       <VStack spacing={7}>
         <Text fontSize="xl" textAlign="center">
-          I create beautiful applications and have fun while I&apos;m at it
+          I build efficient solutions and have fun while I&apos;m at it
         </Text>
         <Link href="/portfolio" passHref>
           <Button

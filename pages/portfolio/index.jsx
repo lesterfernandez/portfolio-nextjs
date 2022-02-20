@@ -19,7 +19,7 @@ export async function getStaticProps() {
           label: "Real-Time Messenger",
           title: "Live Chat App",
           description:
-            "A chat web app where users can log in, add friends, see their status, and communicate with them in real time. I built this application for fun and to challenge myself.",
+            "A web app where users can log in, add friends, see their friend's status, and communicate in real time. I built this application for fun and to challenge myself.",
           challenges: [{}],
           demoText: "Live Demo",
           demoLink: "https://lester-whatsapp.netlify.app",
