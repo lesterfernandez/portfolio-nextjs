@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps, router }) {
         <title>Lester Fernandez</title>
         <meta
           name="description"
-          content="Portfolio website for Lester Fernandez, a software development."
+          content="The personal website for Lester Fernandez, a software engineer."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
