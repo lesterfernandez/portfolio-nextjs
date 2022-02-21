@@ -14,7 +14,7 @@ const ContactMe = () => {
         Contact
       </Heading>
       <HStack my="3rem" alignItems="start">
-        <SocialLinks spacing={4} mt="3rem" />
+        <SocialLinks spacing={4} mt="2rem" />
         <Formik
           initialValues={{ subject: "", body: "" }}
           validationSchema={Yup.object({

@@ -16,6 +16,23 @@ export async function getStaticProps() {
     props: {
       projects: [
         {
+          label: "Sorting Visualizer",
+          title: "Sorting Visualizer",
+          description:
+            "An application to observe popular sorting algorithms and their relative speed compared to each other. I built this application when sorting algorithms peaked my interest and I decided it would be fun to create a sorting visualizer. ",
+          challenges: [
+            {
+              Animations:
+                "I already knew how to implement common sorting algorithms, but a real challenge arised when I had to animate the sorting process. After brainstorming many solutions I ended up creating an algorithm which receives a list of animations and sequentially displays them through DOM manipulation.",
+            },
+          ],
+          demoText: "Live Demo",
+          demoLink: "https://lesterfernandez.github.io/sorting-visualizer/",
+          sourceLink:
+            "https://github.com/lesterfernandez/sorting-visualizer",
+          tags: ["TypeScript", "React.js", "TailwindCSS"],
+        },
+        {
           label: "Real-Time Messenger",
           title: "Live Chat App",
           description:
@@ -38,26 +55,15 @@ export async function getStaticProps() {
           demoLink: "https://lester-whatsapp.netlify.app",
           sourceLink: "https://bit.ly/lester_messenger_code",
           tags: [
-            "NodeJS",
+            "Node.js",
             "React",
-            "SocketIO",
-            "ExpressJS",
+            "Socket.io",
             "Redis",
             "PostgreSQL",
-            "Dokku",
             "Digital Ocean",
-            "Lets Encrypt",
+            "Let's Encrypt",
+            "Dokku",
           ],
-          architecture: {
-            "Front End":
-              "The front-end uses React.js along with React Router to implement client-side routing. It uses Formik and Yup to do client-side form validation. Front-end authorization is done with the help of the React Context api. However, because front-end code is vulnerable, every user action is verified on the back-end.",
-            "Back End":
-              "Written in Node.js, the back-end for this application uses Socket.io for real-time communication and express-session for server-side user sessions. User submitted forms are validated through Yup. The MVC paradigm is implemented in order follow project management best practices.",
-            Database:
-              "Redis is used for rate limiting and to store conversations. While user accounts are stored in PostgreSQL.",
-            "Web Hosting":
-              "While the front-end is hosted on Netlify, the server and databases are hosted on Digital Ocean. The back-end is configured with a Lets Encrypt HTTPS certificate tied to the NGinx reverse proxy. The Dokku PaaS is used for continuous deployment.",
-          },
         },
         {
           label: "Personal Micro Blog",
@@ -73,33 +79,22 @@ export async function getStaticProps() {
               Authentication:
                 "I wanted to implement OAuth for this project and focused on Google OAuth. I had to learn the OAuth protocol and flow. Eventually, I was able to follow the protocol and used OAuth to authenticate users and then create their session in the back-end.",
             },
+            {
+              "Data Caching":
+                "Data is frequently requested from the back-end, so in order to maintain a good user experience, server-side data is cached client-side. This was accomplished with React Query and results in a snappy user-experience.",
+            },
           ],
           demoText: "Live Demo",
           demoLink: "https://social-media-react-4.netlify.app/",
           sourceLink: "https://bit.ly/lester_microblog_code",
           tags: [
-            "NodeJS",
+            "React.js",
+            "Node.js",
             "PostgreSQL",
-            "ExpressJS",
             "PassportJS",
             "Google OAuth 2.0",
-            "ReactJS",
-            "React Router",
             "React Query",
-            "JavaScript",
           ],
-          architecture: {
-            "Front End":
-              "React is used along with modern features such as React Context and Hooks. Client-Side Routing is done with React Router v6.",
-            "Data Caching":
-              "Data is frequently being requested from the back-end, so in order to keep a good user experience server-side data is cached on the client. This is done with React Query and results in users only seeing a loading screen on the first request.",
-            "Back End":
-              "NodeJS is used as the server-side language, along with ExpressJS as the back-end framework. Routing is used to keep the files small and maintainable.",
-            Authentication:
-              "Users are authenticated through Google OAuth 2.0. PassportJS helps reduce redundancy in the code. Express-session stores user sessions and sets a cookie on the client's browser.",
-            Database:
-              "All user accounts are stored and managed in a PostgreSQL database. Relations are used to tie user accounts to their posts.",
-          },
         },
         {
           label: "IOS Mobile Game",
@@ -128,7 +123,6 @@ export async function getStaticProps() {
             "Unity",
             "Mirror Multiplayer Framework",
             "Playfab PaaS",
-            "OOP",
           ],
         },
       ],

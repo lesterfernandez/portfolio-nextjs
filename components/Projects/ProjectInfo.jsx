@@ -58,6 +58,7 @@ const ProjectInfo = ({
                   textDecoration="underline"
                   href={demoLink}
                   target="_blank"
+                  wordBreak={"break-word"}
                 >
                   {demoLink}
                 </Link>
@@ -71,6 +72,7 @@ const ProjectInfo = ({
                   textDecoration="underline"
                   href={sourceLink}
                   target="_blank"
+                  wordBreak={"break-word"}
                 >
                   {sourceLink}
                 </Link>

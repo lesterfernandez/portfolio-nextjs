@@ -105,7 +105,7 @@ const ProjectThumbnail = ({ label, onOpen, src, previewSrc }) => {
           variants={variants}
           initial="bottomInit"
           animate={isHover ? "bottomAnim" : "bottomInit"}
-          bgColor="#2227"
+          bgColor="#222b"
           zIndex="4"
         >
           <Text color="white" zIndex="5">
