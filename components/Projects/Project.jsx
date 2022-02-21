@@ -4,6 +4,7 @@ import ProjectInfo from "./ProjectInfo";
 import ProjectThumbnail from "./ProjectThumbnail";
 
 const Project = ({
+  description,
   src,
   previewSrc,
   label,
@@ -13,6 +14,7 @@ const Project = ({
   demoText,
   demoLink,
   sourceLink,
+  challenges,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -25,6 +27,8 @@ const Project = ({
       />
 
       <ProjectInfo
+        challenges={challenges}
+        description={description}
         isOpen={isOpen}
         onClose={onClose}
         title={title}

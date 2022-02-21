@@ -15,6 +15,8 @@ const Projects = ({ projects }) => {
       <Wrap justify="center" spacing="1.4rem">
         {projects.map(project => (
           <Project
+            challenges={project.challenges}
+            description={project.description}
             key={project.label + project.title}
             label={project.label}
             title={project.title}

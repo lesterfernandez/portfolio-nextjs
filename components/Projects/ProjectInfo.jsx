@@ -14,9 +14,9 @@ import { Box, VStack } from "@chakra-ui/react";
 import { Tag } from "@chakra-ui/tag";
 import Image from "next/image";
 import Article from "../Article";
-import ProjectArchitecture from "./ProjectArchitecture";
 
 const ProjectInfo = ({
+  description,
   isOpen,
   onClose,
   title,
@@ -26,6 +26,7 @@ const ProjectInfo = ({
   demoText,
   demoLink,
   sourceLink,
+  challenges,
 }) => {
   return (
     <Modal
@@ -33,7 +34,7 @@ const ProjectInfo = ({
       onClose={onClose}
       motionPreset="slideInBottom"
       scrollBehavior="inside"
-      size="2xl"
+      size="xl"
     >
       <ModalOverlay />
       <ModalContent>
@@ -48,7 +49,7 @@ const ProjectInfo = ({
               alt="project preview img"
             />
           </Box>
-          <VStack py="1rem">
+          <VStack pt="1rem">
             {demoText && demoText.length > 1 && (
               <HStack justify="center">
                 <Text>{demoText}</Text>
@@ -76,6 +77,23 @@ const ProjectInfo = ({
               </HStack>
             )}
           </VStack>
+          <Article>
+            <Heading size="lg">Description</Heading>
+            <Text>{description}</Text>
+          </Article>
+          <Article>
+            <Heading size="lg">Challenges Faced</Heading>
+            {challenges.map(obj =>
+              Object.entries(obj).map((arr, idx) => (
+                <Box py="2" key={"chal-" + idx + "-" + arr[0]}>
+                  <Heading as="p" size="md" key={"title-" + arr[0]} py="1">
+                    {arr[0]}
+                  </Heading>
+                  <Text key={"desc-" + arr[1]}>{arr[1]}</Text>
+                </Box>
+              ))
+            )}
+          </Article>
           <Article my="0" m="1.2rem 0 3rem">
             <Heading size="lg">Technologies Used</Heading>
             <Wrap>
@@ -84,7 +102,6 @@ const ProjectInfo = ({
               ))}
             </Wrap>
           </Article>
-          <ProjectArchitecture title={title} architecture={architecture} />
         </ModalBody>
         <ModalFooter>
           <Button onClick={onClose} colorScheme="blue">
