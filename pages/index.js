@@ -45,7 +45,7 @@ const Home = () => {
           <Tag>Node.js</Tag>
           <Tag>Java</Tag>
           <Tag>C#</Tag>
-          <Tag>API Design</Tag>
+          <Tag>APIs</Tag>
           <Tag>PostgreSQL</Tag>
           <Tag>HTML/CSS</Tag>
         </Wrap>
