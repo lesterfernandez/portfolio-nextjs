@@ -1,11 +1,9 @@
 import { Heading, Wrap } from "@chakra-ui/react";
 // photo imports
 import cubedUpIconPic from "../../public/cubedupicon.png";
+import sortingPreview from "../../public/heap2.png";
 import cubedUpPreview from "../../public/ipadscreenshot.png";
-import {
-  default as sortingMain,
-  default as sortingPreview,
-} from "../../public/sorting1.png";
+import sortingMain from "../../public/sorting1.png";
 import twitterCloneFeedPic from "../../public/twitterclonefeed.png";
 import twitterCloneLanding from "../../public/twitterclonelanding.png";
 import whatsappConvo from "../../public/whatsappconvo.png";
