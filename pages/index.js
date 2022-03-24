@@ -13,18 +13,20 @@ const Home = () => {
       <Article>
         <Heading size="lg">About Me</Heading>
         <Text fontSize="lg">
-          I am a software developer based in Miami, Fl that has a passion for
-          using technology to create useful products and solve complex
-          problems. I continuously pursue the expansion of my knowledge and
-          the improvement of my skills as an engineer. <br />
-          <br />I am most experienced with TypeScript and JavaScript, but I
-          am also familiar with Java, C#, and Python. In my freetime I work
-          on side-projects and create YouTube videos about programming and
-          technology.
+          I am a software developer based in Miami, Fl that has a
+          passion for using technology to create useful products and
+          solve complex problems. I continuously pursue the expansion
+          of my knowledge and the improvement of my skills as an
+          engineer. <br />
+          <br />I am most experienced with TypeScript and JavaScript,
+          but I am also familiar with Java, C#, and Python. In my
+          freetime I work on side-projects and create YouTube videos
+          about programming and technology.
         </Text>
         <Spacer />
         <Text fontSize="lg">
-          I am currently majoring in Computer Science at Miami-Dade College.
+          I am currently majoring in Computer Science at Miami-Dade
+          College.
         </Text>
       </Article>
 
@@ -38,13 +40,13 @@ const Home = () => {
           <Tag>TypeScript</Tag>
           <Tag>Git</Tag>
           <Tag>React.js</Tag>
-          <Tag>Node.js</Tag>
-          <Tag>REST</Tag>
-          <Tag>PostgreSQL</Tag>
           <Tag>Redis</Tag>
-          <Tag>Socket.io</Tag>
+          <Tag>GraphQL</Tag>
+          <Tag>Node.js</Tag>
           <Tag>Java</Tag>
           <Tag>C#</Tag>
+          <Tag>API Design</Tag>
+          <Tag>PostgreSQL</Tag>
           <Tag>HTML/CSS</Tag>
         </Wrap>
       </Article>
